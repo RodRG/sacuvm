@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+@import 'tablas.css';
+.login
+{
+	width:400px;
+	height:200px;
+	margin-left:-200px;
+	margin-right:-200px;
+	position:absolute;
+	left:50%;
+	top:25%;
+	background:#F7F7F7;
+}
+.container
+{
+	top:10%;
+	left:50%;
+	position:absolute;
+	margin-right:-375px;
+	margin-left:-375px;
+	width:750px;
+	min-height:330px;
+	border-radius:5px;
+	-moz-box-shadow:    0px 3px 15px 2px #666;
+ 	-webkit-box-shadow: 0px 3px 15px -2px #666;
+ 	box-shadow:         0px 3px 15px 2px #666;
+	font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size:13px;
+	background:#F7F7F7;
+	
+}
+
+.loginContainer
+{
+	border-radius:5px;
+	-moz-box-shadow:    0px 3px 15px 2px #666;
+ 	-webkit-box-shadow: 0px 3px 15px -2px #666;
+ 	box-shadow:         0px 3px 15px 2px #666;
+	font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size:13px;	
+	background:#F7F7F7;
+}
+
+.topHeader
+{
+	
+	/*background-color: #CB2027;*/
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C61F26), to(#CB2027));
+	background: -moz-linear-gradient(bottom, #C61F26, #CB2027);
+	background: -ms-linear-gradient(bottom, #C61F26, #CB2027);
+	background: -o-linear-gradient(bottom, #C61F26, #CB2027);
+	font-weight:550;
+	color:#FFF;
+	font-size:15px;
+	overflow:hidden;
+	text-wrap:none;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	height:25px;
+	vertical-align:middle;
+}
+
+a:link.block,a:visited.block
+{
+	display:block;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#666666;
+	/*width:50px;*/
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+	font-size:.8em;
+
+}
+a:hover.block,a:active.block
+{
+	background-color:#FF6666;
+}
+
+.separator
+{
+	background:#6D6E70;
+	height:3px;
+}
+
+.separatorVertical
+{
+	background:#6D6E70;
+	position:absolute;
+	top:25%;
+	left:50%;
+	width:1px;
+	margin-left:-.5px;
+	margin-right:-.5px;
+	height:120px;
+	z-index:2000;
+}
+
+.tableHeight
+{
+	max-height:200px;
+	overflow:auto;
+	padding-bottom:10px;
+}

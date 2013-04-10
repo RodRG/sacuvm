@@ -1,0 +1,35 @@
+.tableCatalogo{
+	box-shadow: 5px 5px 5px #BDBDBD;
+}
+
+.headerCatalogo{
+	text-transform:uppercase;
+	font-weight:bold;
+	text-align:center;
+	color:black;
+	background-color:white;
+}
+
+.headerCatalogoEliminar{
+	text-transform:uppercase;
+	font-weight:bold;
+	text-align:center;
+	color:red;
+	background-color:white;
+}
+
+.rowCatalogo{
+	background-color:white;
+}
+
+.rowCatalogoEspecial{
+	background-color:white;
+	text-align:center;
+	color:gray;
+	text-decoration:none;
+}
+
+.rowCatalogoLetra{
+	color:gray;
+	text-decoration:none;
+}
