@@ -1,10 +1,11 @@
 <?php
 	
+	include("xajax/xajax_core/xajaxAIO.inc.php");
 	
-	include("xajax/xajax_core/xajaxAIO.inc.php");	
 	include("tableAdmin.php");
 	
 	$xajax = new xajax();
+	
 	
 	function dbC() 
 	{
@@ -20,23 +21,23 @@
 	}
 	
 	
-	function paint_tblasistencia()
-	{					
+	function paint_tblareas()
+	{		
+			
 		
 		$table= new tableAdmin(); 
 		$table->link=dbC(); 
-		$table->table='tblasistencia';
-		$table->border=0;		
+		$table->table='tblareas';
 	
-		$table->fieldArray=array("idPlan"=>array("index","nombre","tblplan"),"idPersonal"=>array("index","CONCAT(apellidos,&quot;,&quot;,nombre)","tblpersonal")); 
-		$table->headerArray=array("PLAN","USUARIO");
-
-		$q='SELECT a.idAsistencia, b.nombre AS idPlan, CONCAT(c.apellidos,", ",c.nombre) AS idPersonal  
-			FROM tblasistencia AS a, tblplan AS b ,tblpersonal AS c
-			WHERE a.idPlan=b.idPlan AND a.idPersonal=c.idPersonal';
-				
+		$table->fieldArray=array("nombre","idCampus"=>array("index","nombre","tblcampus")); 
+		
+		$table->headerArray=array("Nombre","Campus");
+		
+		$q="SELECT a.idArea, a.nombre, c.nombre AS idCampus FROM tblareas AS a, tblcampus AS c WHERE a.idCampus=c.idCampus";
+		
 		$contenido=$table->paintTable($q);
-				
+		
+		
 		$respuesta = new xajaxResponse();
 		$respuesta->assign("contenido","innerHTML",$contenido);
 		return $respuesta;
@@ -44,8 +45,8 @@
 	}
 	
 	
-	$xajax->registerFunction("paint_tblasistencia");
-	//
+	$xajax->registerFunction("paint_tblareas");
+	
 	$xajax->registerFunction("rowNew");	
 	$xajax->registerFunction("formSubmit");
 	$xajax->registerFunction("rowDelete");	
@@ -61,19 +62,17 @@
 <?php $xajax->printJavascript("xajax/"); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>SAC :: UVM</title>
+
 <script src="jquery/js/jquery-1.9.1.js"></script>
 <script src="jquery/js/jquery-ui-1.10.2.custom.min.js"></script>
-<link rel="stylesheet" type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.10.2.custom.min.css" />
-<style> @import 'css/styles.css';</style>
+<link rel="stylesheet" type="text/css" href=css/style.css"jquery/css/ui-lightness/jquery-ui-1.10.2.custom.min.css" />
+<style> @import 'css/styles.css'; </style>
 </head>
 
-<body onload="xajax_paint_tblasistencia();">
+<body onload="xajax_paint_tblareas();">
 	<div class="container" >
     	<center><div class="topHeader">HOME</div></center>
         <div class="separator"></div>
-        <center><div id="contenido" class="tableHeight"  style="position:relative;">LOL</div></center>
+        <center><div id="contenido" class="tableHeight"  style="position:relative;"></div></center>
     </div>
-
-
-</body>
 </html>

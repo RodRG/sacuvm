@@ -11,6 +11,18 @@
 	<div class="container ">
     	<center><div class="topHeader">HOME</div></center>
         <div class="separator"></div>
+        <table>
+        	<tr>
+            	<td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            	<td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

@@ -32,7 +32,7 @@
                             <td><input type="password" name="password"></td>
                         </tr>
                         <tr>
-                            <td align="right"><a href="#" class="block" style="width:50px;">ENTRAR</a></td>
+                            <td align="right"><a href="main.php" class="block" style="width:50px;">ENTRAR</a></td>
                         </tr>
         			</table>
                </td>

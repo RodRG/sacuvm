@@ -6,7 +6,7 @@
 		public $table;
 		public $fieldArray;
 		public $headerArray;
-		public $border=1;
+		public $border=0;
 		public $headerNormal;
 		public $headerDelete;
 		public $contentNormal;
